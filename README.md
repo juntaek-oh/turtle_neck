@@ -2,10 +2,10 @@
 
 실시간 웹캠을 통한 거북목 자세 감지 및 경고 시스템
 
-## 📸 데모
+## 📸 DEMO
 
 ### 작동 화면
-![시스템 보정](screenshots/calibration.gif)
+![시스템 보정](screenshots/img3.gif)
 
 ### 자세 감지 결과
 
@@ -13,7 +13,7 @@
 
 | 좋은 자세 | 거북목 감지 |
 |:---:|:---:|
-| ![좋은 자세](screenshots/good_posture.jpg) | ![거북목 경고](screenshots/turtle_neck_warning.jpg) |
+| ![좋은 자세](screenshots/img.png) | ![거북목 경고](screenshots/img2.png) |
 | ✅ **Good posture!** | ⚠️ **WARNING: Turtle Neck!** |
 
 </div>
@@ -64,17 +64,17 @@ turtle_neck/
 ## 🎮 사용법
 
 ### 1단계: 시스템 준비
-![준비 단계](screenshots/get_ready.jpg)
+![준비 단계](screenshots/img4.png)
 - 프로그램 실행 후 카메라 앞에 서세요
 - **4초 카운트다운**이 시작됩니다
 
 ### 2단계: 기준점 설정  
-![기준점 설정](screenshots/baseline_capture.jpg)
+![기준점 설정](screenshots/img.png)
 - 카운트다운이 끝나면 **최고의 자세**를 유지하세요
 - 시스템이 자동으로 개인 기준점을 설정합니다
 
 ### 3단계: 실시간 모니터링
-![모니터링](screenshots/monitoring.jpg)
+![모니터링](screenshots/img3.gif)
 - 기준점 설정 완료 후 실시간 자세 모니터링 시작
 - 화면에 **Baseline**과 **Current** 값이 표시됩니다
 
@@ -158,6 +158,8 @@ ipython
 
 ## 👨‍💻 작성자
 
+- **JHC1023** - [GitHub](https://github.com/JHC1023)
+- **juntaek-oh** - [GitHub](https://github.com/juntaek-oh)
 - **HyunBeen96** - [GitHub](https://github.com/HyunBeen96)
 
 ## 🙏 감사의 말
