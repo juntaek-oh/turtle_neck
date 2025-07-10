@@ -11,6 +11,7 @@ ENV/
 env/
 env.bak/
 venv.bak/
+test_venv/
 
 # OpenVINO Notebooks
 model/
