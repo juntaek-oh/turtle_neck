@@ -18,6 +18,21 @@
 
 </div>
 
+## 📋 목차
+- [✨ 주요 기능](#-주요-기능)
+- [🏗️ 시스템 아키텍처](#-시스템-아키텍처)
+- [🚀 빠른 시작](#-빠른-시작)
+- [📁 프로젝트 구조](#-프로젝트-구조)
+- [🎮 사용법](#-사용법)
+- [⚙️ 설정](#-설정)
+- [🔧 시스템 요구사항](#-시스템-요구사항)
+- [📦 의존성](#-의존성)
+- [🎯 알고리즘 원리](#-알고리즘-원리)
+- [🤝 기여하기](#-기여하기)
+- [📄 라이선스](#-라이선스)
+- [👨‍💻 작성자](#-작성자)
+- [🙏 감사의 말](#-감사의-말)
+
 ## ✨ 주요 기능
 
 - **실시간 자세 감지**: OpenVINO 기반 포즈 추정
@@ -26,6 +41,36 @@
 - **정확한 측정**: 코와 어깨 중심점 간의 Y좌표 차이로 정밀 측정
 - **시각적 표시**: 자세 스켈레톤 및 키포인트 실시간 시각화
 - **모듈화 구조**: 기능별로 분리된 재사용 가능한 모듈
+
+## 🏗️ 시스템 아키텍처
+
+아래 다이어그램은 거북목 감지 시스템의 구성 요소와 데이터 흐름을 보여줍니다:
+
+```mermaid
+graph TD
+    subgraph "입력"
+        A[웹캠<br>비디오 스트림]
+    end
+    
+    subgraph "처리 및 분석"
+        B[OpenVINO<br>포즈 추정]
+        C[Pose Decoder<br>키포인트 추출]
+        D[Image Processor<br>데이터 전처리]
+        E[Turtle Neck Detector<br>자세 분석]
+    end
+    
+    subgraph "출력 및 피드백"
+        F[Pose Visualizer<br>시각화]
+        G[경고 메시지<br>실시간 피드백]
+    end
+    
+    A -->|비디오 데이터| D
+    D -->|전처리 데이터| B
+    B -->|포즈 데이터| C
+    C -->|키포인트| E
+    E -->|자세 결과| F
+    E -->|경고 조건| G
+```
 
 ## 🚀 빠른 시작
 
@@ -127,23 +172,6 @@ ipython>=7.0.0
 - **노이즈 필터링**: 신뢰도 낮은 키포인트 제외
 - **실시간 처리**: 30FPS 실시간 분석으로 즉각적인 피드백
 
-## 🔧 시스템 요구사항
-
-- **Python 3.8+**
-- **OpenCV 4.0+**
-- **OpenVINO Runtime**
-- **웹캠** (USB 카메라 또는 내장 카메라)
-
-## 📦 의존성
-
-```
-opencv-python
-openvino
-numpy
-requests
-ipython
-```
-
 ## 🤝 기여하기
 
 1. Fork the Project
@@ -166,3 +194,10 @@ ipython
 
 - [OpenVINO Toolkit](https://github.com/openvinotoolkit/openvino) - 포즈 추정 모델 제공
 - [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) - 자세 감지 알고리즘 참조
+
+<div align="center">
+  🐢 올바른 자세를 위한 거북목 감지 시스템!<br>
+  OpenVINO와 실시간 피드백으로 건강한 습관을 만드세요!<br>
+  ⭐ 도움이 되셨다면 Star를 눌러주세요! ⭐<br>
+  🔄 Pull Requests와 Issues를 환영합니다!
+</div>
